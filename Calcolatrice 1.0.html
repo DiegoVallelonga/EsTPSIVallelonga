@@ -1,0 +1,58 @@
+<html>
+<head>
+    <script type="text/javascript">
+    function stampa() {
+        let n1 = parseInt(document.getElementById("number1").value);
+        let n2 = parseInt(document.getElementById("number2").value);
+        for(i=0;i<document.getElementsByName("Operation").length;i++) {
+
+            if(document.getElementsByName("Operation")[i].checked){
+
+                var operation = document.getElementsByName("Operation")[i].value;   
+                
+            }
+        }
+	
+	switch (operation) {
+		
+		case "+":
+			let ris = n1+n2;
+			document.getElementById("risp").innerHTML= ris;
+			break;
+		case "-":
+			let ris = n1-n2;
+			document.getElementById("risp").innerHTML= ris;
+			break;
+		case "*":
+			let ris = n1*n2;
+			document.getElementById("risp").innerHTML= ris;
+			break;
+		case "/":
+			let ris = n1/n2;
+			document.getElementById("risp").innerHTML= ris;
+			break;
+		default: 
+			let ris = "Choose an operation type.";
+       			document.getElementById("risp").innerHTML= ris;
+	}
+    }
+    </script>
+    <body>
+        <label for="number1">1° number:</label><br>
+        <input type="text" id="number1" add="number1" value=""><br>
+    
+        <label for="number2">2° number:</label><br>
+        <input type="text" id="number2" add="number2" value=""><br>
+
+        <label for="operation">Operation type:</label><br>
+            <div>
+                <input type="radio" name="Operation" value="+">Sum (+)<br>
+                <input type="radio" name="Operation" value="-">Subtraction (-)<br>
+                <input type="radio" name="Operation" value="*">Moltiplication (*)<br>
+                <input type="radio" name="Operation" value="/">Division (/)<br>
+            </div>
+        <input type="button" value="Submit" onclick="stampa()">
+        <p id="risp"></p>
+    </body>
+</head>
+</html>
