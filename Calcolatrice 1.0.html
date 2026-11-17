@@ -2,6 +2,7 @@
 <head>
     <script type="text/javascript">
     function stampa() {
+		let ris = "";
         let n1 = parseInt(document.getElementById("number1").value);
         let n2 = parseInt(document.getElementById("number2").value);
         for(i=0;i<document.getElementsByName("Operation").length;i++) {
@@ -16,23 +17,23 @@
 	switch (operation) {
 		
 		case "+":
-			let ris = n1+n2;
+			ris = n1+n2;
 			document.getElementById("risp").innerHTML= ris;
 			break;
 		case "-":
-			let ris = n1-n2;
+			ris = n1-n2;
 			document.getElementById("risp").innerHTML= ris;
 			break;
 		case "*":
-			let ris = n1*n2;
+			ris = n1*n2;
 			document.getElementById("risp").innerHTML= ris;
 			break;
 		case "/":
-			let ris = n1/n2;
+			ris = n1/n2;
 			document.getElementById("risp").innerHTML= ris;
 			break;
 		default: 
-			let ris = "Choose an operation type.";
+			ris = "Choose an operation type.";
        			document.getElementById("risp").innerHTML= ris;
 	}
     }
