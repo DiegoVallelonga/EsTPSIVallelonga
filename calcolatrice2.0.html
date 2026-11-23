@@ -41,23 +41,23 @@
     buffer.push(a);
     console. log (buffer);
     
-    if (["+,"-" ,"x", "/"].includes (a) ) {
+    if (["+,"-" ,"x", "/"].includes (a)) {
       mostra = "";
     } else {
-      mostra t= a.toString();
+      mostra t = a.toString();
     }
-  document.getElementById (" calc").value= mostra;
+  document.getElementById("calc").value= mostra;
   }
   
   function parseBuffer() {
     let n= "";
     for (i=0; i<buffer.lenght; i++){
       
-      if ([","-", "*", "/"]. includes (buffer[i] )){
-        n += buffer [i] . toString();
+      if ([","-","*","/"].includes (buffer[i] )){
+        n += buffer [i].toString();
       
-        if (i==buffer. length-1){
-          (parsed. push (parseInt (n));
+        if (i==buffer.length-1){
+          (parsed.push (parseInt (n));
         }  
       }else {
         parsed. push (parseInt (n));
