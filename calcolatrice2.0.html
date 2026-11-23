@@ -56,9 +56,9 @@
       if (["+","-","*","/"].includes(buffer[i])){
         n += buffer[i].toString();
         if (i==buffer.length-1){
-          (parsed.push(parseInt(n))
-        
-      else {
+          parsed.push(parseInt(n));
+        }
+      }else {
         parsed.push(parseInt(n));
         n=""
         parsed.push(buffer[i]);
