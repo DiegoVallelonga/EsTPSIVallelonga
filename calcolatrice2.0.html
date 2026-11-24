@@ -10,24 +10,24 @@
     </div>
     <div id="container">
       <div id="num">
-        <input type="button" value="1" id="b" name="1" onclick="aggiungi (1)">
-        <input type="button" value="2" id="b" name="2" onclick="aggiungi (2)">
-        <input type="button" value="3" id="b" name="3" onclick="aggiungi (3)">
-        <input type="button" value="4" id="b" name="4" onclick="aggiungi (4)">
-        <input type="button" value="5" id="b" name="5" onclick="aggiungi (5)">
-        <input type="button" value="6" id="b" name="6" onclick="aggiungi (6)">
-        <input type="button" value="7" id="b" name="7" onclick="aggiungi (7)">
-        <input type="button" value="8" id="b" name="8" onclick="aggiungi (8)">
-        <input type="button" value="9" id="b" name="9" onclick="aggiungi (9)">
-        <input type="button" value="0" id="b" name="0" onclick="aggiungi (0)">
+        <input type="button" value="1" id="b" name="1" onclick="aggiungi(1)">
+        <input type="button" value="2" id="b" name="2" onclick="aggiungi(2)">
+        <input type="button" value="3" id="b" name="3" onclick="aggiungi(3)">
+        <input type="button" value="4" id="b" name="4" onclick="aggiungi(4)">
+        <input type="button" value="5" id="b" name="5" onclick="aggiungi(5)">
+        <input type="button" value="6" id="b" name="6" onclick="aggiungi(6)">
+        <input type="button" value="7" id="b" name="7" onclick="aggiungi(7)">
+        <input type="button" value="8" id="b" name="8" onclick="aggiungi(8)">
+        <input type="button" value="9" id="b" name="9" onclick="aggiungi(9)">
+        <input type="button" value="0" id="b" name="0" onclick="aggiungi(0)">
       </div>
       <div id="op">
-        <input type="button" value="+" id="b" name="+" onclick="aggiungi ('+')">
-        <input type="button" value="-" id="b" name="-" onclick="aggiungi ('-')">
-        <input type="button" value="*" id="b" name="*" onclick="aggiungi ('*')">
-        <input type="button" value="/" id="b" name="/" onclick="aggiungi ('/')">
-        <input type="button" value="^2" id="b" name="^2" onclick="aggiungi ('^2')">
-        <input type="button" value="√" id="b" name="√" onclick="aggiungi ('√')">
+        <input type="button" value="+" id="b" name="+" onclick="aggiungi('+')">
+        <input type="button" value="-" id="b" name="-" onclick="aggiungi('-')">
+        <input type="button" value="*" id="b" name="*" onclick="aggiungi('*')">
+        <input type="button" value="/" id="b" name="/" onclick="aggiungi('/')">
+        <input type="button" value="^2" id="b" name="^2" onclick="aggiungi('^2')">
+        <input type="button" value="√" id="b" name="√" onclick="aggiungi('√')">
         <input type="button" value="=" id="b" name="=" onclick="calcola()">
       </div>
     </div>
@@ -81,7 +81,7 @@ function priorita() {
       i -= 2;
     }
   }  
-  console.log(parsed) ;
+  console.log(parsed);
 }
 function calcola() {
   parseBuffer();
@@ -91,23 +91,23 @@ function calcola() {
     
     switch (parsed[i]) {
       case "+":
-        risultato += parsed [i+1];
+        risultato += parsed[i+1];
         i++;
         break;
       case "-":
-        risultato -= parsed [i+1];
+        risultato -= parsed[i+1];
         i++;
         break;
       case "*":
-        risultato *= parsed [1+1];
+        risultato *= parsed[i+1];
         i++;
         break;
       case "/":
-        risultato /= parsed [i+1];
+        risultato /= parsed[i+1];
         i++;
         break;
       default:
-        risultato = parsed [i];
+        risultato = parsed[i];
         break;
       }
     }
