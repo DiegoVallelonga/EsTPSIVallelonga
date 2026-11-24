@@ -87,7 +87,7 @@ function calcola() {
   parseBuffer();
   priorita();
   
-  for (i=0; i<parsed. length; i++) {
+  for (i=0; i<parsed.length; i++) {
     
     switch (parsed[i]) {
       case "+":
@@ -104,6 +104,10 @@ function calcola() {
         break;
       case "/":
         risultato /= parsed[i+1];
+        i++;
+        break;
+      case "^2":
+        risultato *= parsed[i];
         i++;
         break;
       default:
